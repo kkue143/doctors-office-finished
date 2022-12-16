@@ -1,0 +1,9 @@
+<mat-card class="app-card">
+    <mat-card-header>
+      <mat-card-title>Booked</mat-card-title>
+      <mat-card-subtitle>{{ appointment?.date | date : 'E MM/dd' }} Slot {{ appointment === undefined ? '' : (appointment.slot + 1)}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <button mat-button color="warning" (click)="appointment && ui.cancelAppt(appointment)"><mat-icon>cancel</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
